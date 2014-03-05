@@ -39,6 +39,8 @@ There are a number of steps, as long as they occur in the right order everything
   $ make install
 ```
 
+### WTF!?
+
 - `aclocal` generates some automake macros used in the automake files.
 - `autoheader` will generate the config.h header.
 - `automake --add-missing` will then process `automake.am` and generate `automake.in`.
