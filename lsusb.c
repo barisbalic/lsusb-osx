@@ -3960,11 +3960,6 @@ int main(int argc, char *argv[])
 		case 'h':
 			help=1;
 			break;
-
-		case 't':
-			treemode = 1;
-			break;
-
 		case 's':
 			cp = strchr(optarg, ':');
 			if (cp) {
@@ -3992,10 +3987,6 @@ int main(int argc, char *argv[])
 				product = strtoul(cp, NULL, 16);
 			break;
 
-		case 'D':
-			devdump = optarg;
-			break;
-
 		case '?':
 		default:
 			err++;
@@ -4013,10 +4004,6 @@ int main(int argc, char *argv[])
 			"  -d vendor:[product]\n"
 			"      Show only devices with the specified vendor and\n"
 			"      product ID numbers (in hexadecimal)\n"
-			"  -D device\n"
-			"      Selects which device lsusb will examine\n"
-			"  -t, --tree\n"
-			"      Dump the physical USB device hierarchy as a tree\n"
 			"  -V, --version\n"
 			"      Show version of program\n"
 			"  -h, --help\n"
@@ -4038,14 +4025,6 @@ int main(int argc, char *argv[])
 				DATADIR "/usb.ids",
 				strerror(err));
 	status = 0;
-
-	if (treemode) {
-		/* treemode requires at least verblevel 1 */
-		verblevel += 1 - VERBLEVEL_DEFAULT;
-		status = lsusb_t();
-		names_exit();
-		return status;
-	}
 
 	err = libusb_init(&ctx);
 	if (err) {
