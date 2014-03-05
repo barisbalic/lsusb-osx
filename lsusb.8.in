@@ -33,20 +33,6 @@ Both ID's are given in decimal and may be omitted.
 Show only devices with the specified vendor and product ID.
 Both ID's are given in hexadecimal.
 .TP
-.B \-D \fIdevice\fP
-Do not scan the /dev/bus/usb directory,
-instead display only information
-about the device whose device file is given.
-The device file should be something like /dev/bus/usb/001/001.
-This option displays detailed information like the \fBv\fP option;
-you must be root to do this.
-.TP
-.B \-t
-Tells
-.I lsusb
-to dump the physical USB device hierarchy as a tree. This overrides the
-\fBv\fP option.
-.TP
 .B \-V, \-\-version
 Print  version information on standard output,
 then exit successfully.
