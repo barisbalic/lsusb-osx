@@ -1,0 +1,7 @@
+autom4te/
+config.log
+config.status
+configure
+Makefile
+config.h.in
+lsusb
