@@ -6,3 +6,4 @@ configure
 Makefile
 Makefile.in
 lsusb
+lsusb.8
