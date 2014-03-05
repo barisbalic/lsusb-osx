@@ -1,7 +1,8 @@
 autom4te/
 config.log
 config.status
+config.h.in
 configure
 Makefile
-config.h.in
+Makefile.in
 lsusb
