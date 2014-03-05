@@ -1,9 +1,5 @@
 #!/bin/sh -e
 
-cd usbhid-dump
-./bootstrap
-cd ..
-
 #gtkdocize
 autoreconf --install --symlink
 
