@@ -23,6 +23,7 @@ You will need to install `autotools`, `autoconf` and `libusb`.  If you don't hav
   $ brew install automake
   $ brew install autoconf
   $ brew install libusb
+  $ brew install pkg-config
 ```
 
 ### Configuring
